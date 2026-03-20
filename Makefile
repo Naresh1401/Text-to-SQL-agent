@@ -1,13 +1,22 @@
-.PHONY: install setup-db run test
+.PHONY: install run-api run-ui test docker-up docker-down
 
 install:
 	pip install -r requirements.txt
 
-setup-db:
-	python data/setup_db.py
-
-run:
+run-api:
 	uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 
+run-ui:
+	streamlit run ui/app.py
+
 test:
-	python tests/test_text2sql.py
+	python tests/test_*.py
+
+docker-up:
+	docker-compose up --build -d
+
+docker-down:
+	docker-compose down
+
+logs:
+	docker-compose logs -f api
