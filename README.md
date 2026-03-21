@@ -1,5 +1,7 @@
 # Text-to-SQL Agent with Self-Correction
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Render-64ffda?style=for-the-badge&logo=render)](https://text-to-sql-agent-2za9.onrender.com) [![GitHub](https://img.shields.io/badge/GitHub-Naresh1401-181717?style=for-the-badge&logo=github)](https://github.com/Naresh1401/Text-to-SQL-agent)
+
 Convert plain English questions into SQL queries that execute against your database — with a self-correction loop that automatically fixes failed queries, and a safety layer that blocks all destructive operations.
 
 ## The Problem
